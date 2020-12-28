@@ -1,0 +1,39 @@
+.footer {
+  color: $white-color;
+  background-image: url('../img/footer-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 55px 0 45px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social {
+    text-align: center;
+
+    &-title {
+      margin-bottom: 20px;
+    }
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      width: 43px;
+      height: 43px;
+      background-color: $black-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 8px;
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+}
