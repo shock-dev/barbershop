@@ -10,6 +10,21 @@
     justify-content: space-between;
   }
 
+  &__images-big {
+    box-shadow: 0 0 10px #888888;
+    margin-bottom: 20px;
+  }
+
+  &__images-min {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__images-min__item {
+    box-shadow: 0 0 10px #888888;
+  }
+
   &__info {
     width: 100%;
   }
