@@ -2,7 +2,7 @@
   background-color: $black-color;
   color: $white-color;
 
-  .container {
+  &.main-header .container {
     max-width: 1010px;
     padding: 0 15px;
   }
