@@ -1,0 +1,17 @@
+.page {
+  background-image: url('../img/page-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__title {
+    font-size: 30px;
+    line-height: 42px;
+    padding-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    max-width: 970px;
+  }
+}

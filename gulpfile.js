@@ -98,7 +98,7 @@ const imgToDist = () => (
 )
 
 const htmlInclude = () => (
-    src('./src/index.html')
+    src('./src/**.html')
         .pipe(fileinclude({
             prefix: '@',
             basepath: '@file'
@@ -115,7 +115,7 @@ const watchFiles = () => {
     })
 
     watch('./src/scss/**/*.scss', styles)
-    watch('./src/index.html', htmlInclude)
+    watch('./src/**.html', htmlInclude)
     watch(['./src/img/**.jpg', './src/img/**.jpeg', './src/img/**.png'], imgToDist)
     watch(['./src/img/**.svg'], svgSprites)
     watch(['./src/fonts/**.ttf'], fonts)
