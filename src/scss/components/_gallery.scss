@@ -1,0 +1,15 @@
+.gallery {
+
+  &__box {
+    margin-bottom: 40px;
+    margin-top: 56px;
+  }
+
+  &__buttons {
+    display: flex;
+
+    .btn:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
