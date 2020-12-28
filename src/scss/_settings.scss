@@ -44,3 +44,18 @@ a {
 img {
   max-width: 100%;
 }
+
+.container {
+  max-width: 970px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn-reset {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
