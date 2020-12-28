@@ -25,7 +25,7 @@
       transform: translateY(-50%);
     }
 
-    &:before {
+    &.bottom-line:before {
       content: '';
       position: absolute;
       width: 100%;
@@ -40,5 +40,13 @@
     font-size: 30px;
     line-height: 42px;
     margin-bottom: 30px;
+  }
+
+  &__buttons {
+    display: flex;
+
+    .btn:not(:last-child) {
+      margin-right: 20px;
+    }
   }
 }

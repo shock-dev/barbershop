@@ -1,0 +1,47 @@
+.subscribe {
+  padding-right: 80px;
+
+  &__form {
+    display: block;
+  }
+
+  &__form-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    margin-top: 10px;
+  }
+
+  &__name {
+    display: inline-block;
+    padding-left: 12px;
+  }
+
+  &__field {
+    display: block;
+    width: 140px;
+    height: 43px;
+    border: 2px solid $black-color;
+    padding: 0 15px;
+    outline: none;
+    text-transform: uppercase !important;
+
+    &:focus {
+      border-color: $brown;
+    }
+
+    &::placeholder {
+      text-transform: capitalize;
+      mix-blend-mode: normal;
+      font-family: inherit;
+      color: rgba($black-color, .7);
+    }
+  }
+
+  &__btn {
+    margin-top: 20px;
+  }
+}

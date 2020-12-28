@@ -5,6 +5,10 @@
   transition: background-color .2s;
 
   &:hover {
-    background-color: $btn-hover-color;
+    background-color: $brown;
+  }
+
+  &-full {
+    width: 100%;
   }
 }
