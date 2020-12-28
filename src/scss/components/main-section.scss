@@ -1,0 +1,29 @@
+.main-section {
+  width: 50%;
+  padding: 35px 40px 55px 80px;
+
+  &-wrapper {
+    background-image: url('../img/main-section-bg.jpg');
+    position: relative;
+    display: flex;
+
+    &:after {
+      content: '';
+      position: absolute;
+      background-image: url('../img/main-section-line.png');
+      width: 8px;
+      height: 278px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,10 @@
+.btn {
+  background-color: $black-color;
+  padding: 14px 34px;
+  color: $white-color;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: $btn-hover-color;
+  }
+}
