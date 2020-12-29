@@ -6,14 +6,25 @@
     margin-bottom: 20px;
   }
 
+  &__group {
+    margin-bottom: 50px;
+  }
+
   &__label {
     display: flex;
     align-items: center;
     cursor: pointer;
-    margin-bottom: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
 
     &:not(.disabled):hover {
       .sidebar__checkbox-text {
+        color: $brown;
+      }
+
+      .sidebar__radio-text {
         color: $brown;
       }
     }
@@ -57,7 +68,7 @@
         position: absolute;
         width: 14px;
         height: 2px;
-        top: 7.5px;
+        top: 7px;
         left: calc(50% - 7px);
         background-color: $black-color;
       }
@@ -68,6 +79,48 @@
 
       &:after {
         transform: rotate(-45deg);
+      }
+    }
+
+    &-text {
+      line-height: 18px;
+      transition: color .2s;
+    }
+  }
+
+  &__radio {
+    &-real {
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      opacity: 0;
+      appearance: none;
+    }
+
+    &-real:checked + .sidebar__radio-fake:after {
+      display: block;
+    }
+
+    &-fake {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $black-color;
+      margin-right: 24px;
+      position: relative;
+      border-radius: 50%;
+
+      &:after {
+        content: '';
+        display: none;
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: $black-color;
       }
     }
 
