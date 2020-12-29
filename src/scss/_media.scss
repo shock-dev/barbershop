@@ -88,6 +88,21 @@
   }
 }
 
+
+@media (max-width: 540px) {
+  .footer__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__about {
+    margin-bottom: 30px;
+  }
+}
+
+
+
 @media (max-width: 500px) {
   .main-section-wrapper {
     width: 100%;
