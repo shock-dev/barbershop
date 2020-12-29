@@ -29,11 +29,19 @@
 
   &__row {
     display: flex;
-    padding-bottom: 70px;
+
+    &:last-child {
+      padding-bottom: 70px;
+    }
   }
 
   &__col {
     width: 50%;
+
+    &.without-title {
+      display: flex;
+      align-items: flex-end;
+    }
   }
 
   &__col-title {
@@ -48,10 +56,31 @@
   }
 
   &__list {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
   }
 
   &__item:not(:last-child) {
     margin-bottom: 15px;
+  }
+
+  &__table {
+    border-top: 2px solid $black-color;
+    border-left: 2px solid $black-color;
+    margin-bottom: 60px;
+
+    &-row {
+      display: flex;
+    }
+
+    &-col {
+      width: 50%;
+      padding: 15px;
+      border-bottom: 2px solid $black-color;
+      border-right: 2px solid $black-color;
+
+      &:last-child {
+        text-align: center;
+      }
+    }
   }
 }
