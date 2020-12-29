@@ -1,0 +1,11 @@
+
+@media (max-width: 700px) {
+  .menu__list,
+  .header__btn {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
