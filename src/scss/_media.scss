@@ -1,5 +1,5 @@
 
-@media (max-width: 700px) {
+@media (max-width: 840px) {
   .menu__list,
   .header__btn {
     display: none;
@@ -7,5 +7,22 @@
 
   .burger {
     display: flex;
+  }
+
+  .advantages {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .advantages__item {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
+  }
+
+  .advantages__text {
+    max-width: 600px;
   }
 }
