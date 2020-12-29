@@ -39,6 +39,19 @@
   .contact-info {
     padding-bottom: 20px;
   }
+
+  .subscribe__label {
+    width: 48%;
+  }
+
+  .subscribe__name {
+    padding-left: 0;
+  }
+
+  .subscribe__field {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 @media (max-width: 840px) {
@@ -98,6 +111,17 @@
       margin-right: 0;
       margin-bottom: 10px;
     }
+  }
+}
+
+@media (max-width: 380px) {
+  .subscribe__label {
+    width: 100%;
+  }
+
+  .subscribe__field {
+    width: 100%;
+    max-width: none;
   }
 }
 
