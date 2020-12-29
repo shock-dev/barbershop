@@ -80,13 +80,24 @@
     width: 100%;
   }
 
-  .gallery {
+  .main-section {
     padding-left: 20px;
     padding-right: 20px;
   }
 
   .gallery__box {
     margin-bottom: 25px;
+  }
+
+  .contact-info__buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .btn:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
   }
 }
 
