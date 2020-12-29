@@ -1,3 +1,45 @@
+@media (max-width: 1000px) {
+  .main-section {
+    width: 50%;
+    padding: 25px 40px 50px 50px;
+  }
+
+  .subscribe__field {
+    max-width: 180px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 930px) {
+  .main-section-wrapper {
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .main-section {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .main-section-wrapper:after {
+    display: none;
+  }
+
+  .main-section__buttons {
+    justify-content: center;
+  }
+
+  .gallery__box {
+    margin-top: 0;
+  }
+
+  .news,
+  .contact-info {
+    padding-bottom: 20px;
+  }
+}
 
 @media (max-width: 840px) {
   .menu__list,
@@ -26,3 +68,16 @@
     max-width: 600px;
   }
 }
+
+@media (max-width: 700px) {
+  .main-section-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-section-wrapper {
+    width: 100%;
+  }
+}
+
