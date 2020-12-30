@@ -132,6 +132,12 @@
     align-items: center;
     justify-content: center;
     padding: 60px;
+    transform: translateX(100%);
+    transition: transform .3s;
+
+    &.active {
+      transform: translateX(0);
+    }
 
     li {
       width: 100%;
