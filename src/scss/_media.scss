@@ -10,6 +10,12 @@
   }
 }
 
+@media (max-width: 950px) {
+  .price-page__title:after, .price-page__title:before {
+    width: 110px;
+  }
+}
+
 @media (max-width: 930px) {
   .main-section-wrapper {
     flex-direction: column;
@@ -96,6 +102,10 @@
 
   .product__images-min__item {
     width: 30%;
+  }
+
+  .price-page__title:after, .price-page__title:before {
+    display: none;
   }
 }
 
