@@ -2,10 +2,13 @@
 
   &__list {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+    padding: 20px 0;
   }
 
   &__item {
+    white-space: nowrap;
 
     span {
       color: #ABA9A7;
