@@ -76,7 +76,6 @@
 }
 
 @media (max-width: 840px) {
-  .menu__list,
   .header__btn {
     display: none;
   }
@@ -117,6 +116,32 @@
 
   .price-page__title:after, .price-page__title:before {
     display: none;
+  }
+
+  .menu__list {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    max-width: 400px;
+    width: 80%;
+    z-index: 100;
+    background-color: $black-color;
+    color: $white-color;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+
+    li {
+      width: 100%;
+      text-align: center;
+
+      a {
+        display: block;
+        border-bottom: 1px solid #3b3a3a;
+      }
+    }
   }
 }
 
@@ -249,6 +274,10 @@
   .catalog__item {
     width: calc(100% - 20px);
     margin: 10px;
+  }
+
+  .menu__list {
+    padding: 20px;
   }
 }
 
