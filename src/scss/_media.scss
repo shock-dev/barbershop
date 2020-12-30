@@ -64,6 +64,12 @@
   }
 }
 
+@media (max-width: 900px) {
+  .price-page__col-text {
+    padding-right: 30px;
+  }
+}
+
 @media (max-width: 840px) {
   .menu__list,
   .header__btn {
@@ -149,8 +155,48 @@
   .product__info-buy {
     margin-bottom: 35px;
   }
+
+  .price-page__row.about {
+    flex-direction: column;
+    align-items: center;
+
+    .price-page__col {
+      width: 100%;
+    }
+
+    .price-page__col-text {
+      padding-right: 0;
+      max-width: none;
+    }
+  }
+
+  .price-page__col.without-title {
+    padding-top: 20px;
+  }
 }
 
+@media (max-width: 580px) {
+  .price-page__row {
+    flex-direction: column;
+  }
+
+  .price-page__table {
+    margin-bottom: 35px;
+  }
+
+  .price-page__col {
+    width: 100%;
+  }
+
+  .price-page__col.table {
+    order: -1;
+  }
+
+  .price-page__title {
+    font-size: 38px;
+    margin-bottom: 35px;
+  }
+}
 
 @media (max-width: 540px) {
   .footer__inner {
