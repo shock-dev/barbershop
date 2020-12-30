@@ -52,6 +52,10 @@
     width: 100%;
     max-width: none;
   }
+
+  .product__images {
+    margin-right: 50px;
+  }
 }
 
 @media (max-width: 840px) {
@@ -80,11 +84,60 @@
   .advantages__text {
     max-width: 600px;
   }
+
+  .product__images-min,
+  .product__images-big {
+    width: 90%;
+  }
+
+  .product__images {
+    margin-right: 0;
+  }
+
+  .product__images-min__item {
+    width: 30%;
+  }
+}
+
+@media (max-width: 750px) {
+  .product__images-min,
+  .product__images-big {
+    width: 80%;
+  }
+
+  .product__images {
+    min-width: auto;
+    max-width: 400px;
+    width: 100%;
+    margin-right: 30px;
+  }
+
+  .product__images-min,
+  .product__images-big {
+    width: 100%;
+  }
 }
 
 @media (max-width: 700px) {
   .main-section-wrapper {
     width: 90%;
+  }
+
+  .product__wrapper {
+    flex-direction: column;
+  }
+
+  .product__images {
+    margin: 0 auto 0 auto;
+    max-width: 450px;
+  }
+
+  .product__images-min {
+    margin-bottom: 15px;
+  }
+
+  .product__info-buy {
+    margin-bottom: 35px;
   }
 }
 
