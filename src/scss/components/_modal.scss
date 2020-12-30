@@ -21,16 +21,17 @@
   }
 
   &__field {
+    position: relative;
     display: block;
+    outline: none;
     height: 42px;
     border: 2px solid $black-color;
     width: 100%;
     margin-bottom: 10px;
     padding: 0 40px 0 15px;
 
-
-    &::placeholder {
-      color: $black-color;
+    &:focus {
+      border-color: $brown;
     }
   }
 }
