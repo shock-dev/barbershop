@@ -80,6 +80,11 @@
     display: none;
   }
 
+  .menu__item--btn {
+    display: block;
+    width: 100%;
+  }
+
   .burger {
     display: flex;
   }
