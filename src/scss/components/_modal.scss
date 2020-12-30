@@ -1,0 +1,36 @@
+.modal {
+  max-width: 460px;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: $white-color;
+  padding: 50px 80px;
+  background-image: url('../img/main-section-bg.jpg');
+
+  &__title {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  &__text {
+    margin: 15px 0 12px;
+  }
+
+  &__field {
+    display: block;
+    height: 42px;
+    border: 2px solid $black-color;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 40px 0 15px;
+
+
+    &::placeholder {
+      color: $black-color;
+    }
+  }
+}
