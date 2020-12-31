@@ -1,13 +1,9 @@
 .modal {
+  position: relative;
   max-width: 460px;
   z-index: 120;
   width: 100%;
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  margin: auto;
   background-color: $white-color;
   padding: 50px 80px;
   background-image: url('../img/main-section-bg.jpg');
@@ -18,6 +14,15 @@
   &.active {
     visibility: visible;
     opacity: 1;
+  }
+
+  &__wrapper {
+    position: fixed;
+    padding: 0 15px;
+    display: flex;
+    top: 0;
+    height: 100vh;
+    width: 100%;
   }
 
   &__title {
