@@ -16,3 +16,12 @@ const toggleElements = (elements, action = 'add') => {
         })
     }
 }
+
+burger.addEventListener('click', () => {
+    isScrollingAvailable()
+    toggleElements([overlay, menu])
+
+    overlay.addEventListener('click', () => {
+        toggleElements([overlay, menu], 'remove')
+    })
+})
