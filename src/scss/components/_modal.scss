@@ -84,4 +84,78 @@
       }
     }
   }
+
+  &__additional {
+    display: flex;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &:not(.disabled):hover {
+      .modal__checkbox-text {
+        color: $brown;
+      }
+    }
+
+    &.disabled {
+      pointer-events: none;
+    }
+  }
+
+  &__checkbox {
+
+    &-real {
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      opacity: 0;
+      appearance: none;
+    }
+
+    &-real:checked + .modal__checkbox-fake:before,
+    &-real:checked + .modal__checkbox-fake:after {
+      display: block;
+    }
+
+    &-fake {
+      flex: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $black-color;
+      margin-right: 13px;
+      position: relative;
+
+      &:before,
+      &:after {
+        content: '';
+        display: none;
+        position: absolute;
+        width: 14px;
+        height: 2px;
+        top: 7px;
+        left: calc(50% - 7px);
+        background-color: $black-color;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &-text {
+      line-height: 18px;
+      transition: color .2s;
+    }
+  }
 }
