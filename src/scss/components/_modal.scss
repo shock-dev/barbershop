@@ -33,5 +33,32 @@
     &:focus {
       border-color: $brown;
     }
+
+    &::placeholder {
+      color: $black-color;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    top: 10px;
+    right: -32px;
+    outline: none;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #999999;
+      transition: fill .2s;
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: $white-color;
+      }
+    }
   }
 }
