@@ -10,6 +10,14 @@
   background-color: $white-color;
   padding: 50px 80px;
   background-image: url('../img/main-section-bg.jpg');
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
 
   &__title {
     font-size: 30px;
