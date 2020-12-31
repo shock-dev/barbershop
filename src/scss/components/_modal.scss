@@ -21,14 +21,37 @@
   }
 
   &__field {
-    position: relative;
     display: block;
     outline: none;
     height: 42px;
     border: 2px solid $black-color;
     width: 100%;
-    margin-bottom: 10px;
-    padding: 0 40px 0 15px;
+    padding: 0 50px 0 15px;
+
+    &-wrapper {
+      margin-bottom: 10px;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 25px;
+      }
+
+      &.login:after {
+        width: 12px;
+        height: 11px;
+        background-image: url('../img/login-icon.png');
+      }
+
+      &.password:after {
+        width: 12px;
+        height: 15px;
+        background-image: url('../img/lock-icon.png');
+      }
+    }
 
     &:focus {
       border-color: $brown;
