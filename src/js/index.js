@@ -9,3 +9,10 @@ const isScrollingAvailable = (q = true) => {
     document.body.classList[q ? 'add' : 'remove']('lock')
 }
 
+const toggleElements = (elements, action = 'add') => {
+    if ( Array.isArray(elements) ) {
+        elements.forEach(item => {
+            item.classList[action]('active')
+        })
+    }
+}
