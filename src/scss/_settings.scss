@@ -88,24 +88,19 @@ img {
 
 .map {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   right: 0;
-  bottom: 0;
-  display: flex;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .3s;
+  left: 0;
   z-index: 130;
-
-  &.active {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-.map-iframe {
   width: 80%;
   height: 80%;
-  margin: auto;
+  margin: 0 auto;
+  visibility: hidden;
+  opacity: 0;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
 }

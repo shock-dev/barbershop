@@ -39,6 +39,17 @@ loginButtonsFromMenu.forEach(item => {
 
         closeModalButton.addEventListener('click', () => {
             toggleElements([overlay, modal], 'remove')
+            isScrollingAvailable(false)
         })
+    })
+})
+
+openMapButton.addEventListener('click', () => {
+    isScrollingAvailable()
+    toggleElements([overlay, map])
+
+    overlay.addEventListener('click', () => {
+        toggleElements([overlay, map], 'remove')
+        isScrollingAvailable(false)
     })
 })
