@@ -25,3 +25,17 @@ burger.addEventListener('click', () => {
         toggleElements([overlay, menu], 'remove')
     })
 })
+
+loginButtonsFromMenu.forEach(item => {
+    item.addEventListener('click', () => {
+        toggleElements([overlay, menu], 'remove')
+
+        setTimeout(() => {
+            toggleElements([overlay, modal])
+        }, 300)
+
+        closeModalButton.addEventListener('click', () => {
+            toggleElements([overlay, modal], 'remove')
+        })
+    })
+})
