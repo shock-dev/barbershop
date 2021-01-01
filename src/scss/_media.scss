@@ -225,6 +225,11 @@
     top: 15px;
     right: 15px;
   }
+
+  .map-iframe {
+    width: 70%;
+    height: 70%;
+  }
 }
 
 @media (max-width: 580px) {
@@ -320,6 +325,11 @@
 
   .modal__checkbox-fake {
     margin-right: 5px;
+  }
+
+  .map-iframe {
+    width: 80%;
+    height: 70%;
   }
 }
 
