@@ -96,6 +96,7 @@ img {
   opacity: 0;
   visibility: hidden;
   transition: opacity .3s;
+  z-index: 130;
 
   &.active {
     opacity: 1;
