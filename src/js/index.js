@@ -1,4 +1,6 @@
-import Swiper from "swiper";
+import Swiper, { Navigation } from "swiper"
+
+Swiper.use([Navigation])
 
 const burger = document.querySelector('.burger')
 const menu = document.querySelector('.menu__list')
@@ -9,7 +11,12 @@ const closeModalButton = document.querySelector('.modal__close')
 const openMapButton = document.querySelector('#openMapBtn')
 const map = document.querySelector('.map')
 
-const mySwiper = new Swiper('.swiper-container')
+const mySwiper = new Swiper('.swiper-container', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+})
 
 const isScrollingAvailable = (q = true) => {
     document.body.classList[q ? 'add' : 'remove']('lock')
