@@ -1,7 +1,39 @@
 .gallery {
 
-  &__box {
-    margin-bottom: 40px;
-    margin-top: 56px;
+  .swiper-container {
+    width: 100%;
   }
+
+  .swiper-wrapper {
+    height: 200px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-buttons {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    display: none;
+  }
+
+  .swiper-button-prev {
+    margin-right: 15px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static;
+    background-color: $black-color;
+    color: $white-color;
+    left: 0;
+  }
+
 }

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Project</title>
     <link rel="stylesheet" href="css/index.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body class="main-page">
 
@@ -84,12 +85,23 @@
 
             <section class="main-section gallery">
                 <h3 class="main-section__title gallery__title">ФОТОГАЛЕРЕЯ</h3>
-                <div class="gallery__box">
-                    <img src="img/gallery-img.jpg" alt="">
-                </div>
-                <div class="main-section__buttons">
-                    <button class="btn btn-reset">НАЗАД</button>
-                    <button class="btn btn-reset">ВПЕРЕД</button>
+
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/gallery-img.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/gallery-img.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/gallery-img.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-buttons">
+                        <button class="btn btn-reset swiper-button-prev">НАЗАД</button>
+                        <button class="btn btn-reset swiper-button-next">ВПЕРЕД</button>
+                    </div>
                 </div>
             </section>
         </div>
