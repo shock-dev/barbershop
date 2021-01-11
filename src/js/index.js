@@ -1,4 +1,5 @@
 import Swiper, { Navigation } from "swiper"
+import IMask from 'imask';
 
 Swiper.use([Navigation])
 
@@ -17,6 +18,22 @@ const mySwiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 })
+
+const phoneMask = IMask(
+    document.getElementById('phone-mask'),
+    {
+        mask: '+{7}(000)000-00-00'
+    }
+);
+
+const dateMask = IMask(
+    document.getElementById('date-mask'),
+    {
+        mask: Date,
+        min: new Date(1990, 0, 1),
+        max: new Date(2020, 0, 1),
+        lazy: true
+    });
 
 const isScrollingAvailable = (q = true) => {
     document.body.classList[q ? 'add' : 'remove']('lock')
