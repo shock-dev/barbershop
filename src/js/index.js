@@ -1,4 +1,5 @@
 import Swiper, { Navigation } from "swiper"
+import IMask from 'imask';
 
 Swiper.use([Navigation])
 
@@ -17,6 +18,13 @@ const mySwiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 })
+
+const phoneMask = IMask(
+    document.getElementById('phone-mask'),
+    {
+        mask: '+{7}(000)000-00-00'
+    }
+);
 
 const isScrollingAvailable = (q = true) => {
     document.body.classList[q ? 'add' : 'remove']('lock')
