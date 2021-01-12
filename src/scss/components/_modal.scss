@@ -5,7 +5,7 @@
   margin: auto;
   background-color: $white-color;
   padding: 50px 80px;
-  background-image: url('../img/main-section-bg.jpg');
+  background-image: url('~@/assets/img/main-section-bg.jpg');
   opacity: 1;
 
   &__wrapper {
@@ -54,13 +54,13 @@
       &.login:after {
         width: 12px;
         height: 11px;
-        background-image: url('../img/login-icon.png');
+        background-image: url('~@/assets/img/login-icon.png');
       }
 
       &.password:after {
         width: 12px;
         height: 15px;
-        background-image: url('../img/lock-icon.png');
+        background-image: url('~@/assets/img/lock-icon.png');
       }
     }
 

@@ -3,7 +3,7 @@
   padding: 35px 40px 55px 80px;
 
   &-wrapper {
-    background-image: url('../img/main-section-bg.jpg');
+    background-image: url('~@/assets/img/main-section-bg.jpg');
     position: relative;
     display: flex;
     margin-bottom: 36px;
@@ -15,7 +15,7 @@
     &:after {
       content: '';
       position: absolute;
-      background-image: url('../img/main-section-line.png');
+      background-image: url('~@/assets/img/main-section-line.png');
       width: 8px;
       height: 278px;
       left: 0;
