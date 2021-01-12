@@ -47,6 +47,6 @@
 
 <script>
 export default {
-name: "bsHeader"
+  name: "bsHeader"
 }
 </script>
