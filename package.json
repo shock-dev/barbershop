@@ -4,6 +4,9 @@
   "description": "start gulp",
   "main": "index.js",
   "license": "ISC",
+  "scripts": {
+    "deploy": "node scripts/gh-pages-deploy.js"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
@@ -27,6 +30,7 @@
     "webpack-stream": "^6.1.1"
   },
   "dependencies": {
+    "execa": "^5.0.0",
     "imask": "^6.0.5",
     "normalize.css": "^8.0.1",
     "swiper": "^6.4.5"
