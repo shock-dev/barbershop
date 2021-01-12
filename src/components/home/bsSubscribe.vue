@@ -1,0 +1,33 @@
+<template>
+  <section class="main-section subscribe">
+    <h3 class="main-section__title subscribe__title">ЗАПИСАТЬСЯ</h3>
+    <p class="subscribe__text">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
+    <form class="subscribe__form">
+      <div class="subscribe__form-inner">
+        <label class="subscribe__label">
+          <span class="subscribe__name">ДАТА</span>
+          <input id="date-mask" class="subscribe__field" type="text" placeholder="08.10.2017">
+        </label>
+        <label class="subscribe__label">
+          <span class="subscribe__name">ВРЕМЯ</span>
+          <input class="subscribe__field" type="text" placeholder="10:00">
+        </label>
+        <label class="subscribe__label">
+          <span class="subscribe__name">ВАШЕ ИМЯ</span>
+          <input class="subscribe__field" type="text" placeholder="Борода">
+        </label>
+        <label class="subscribe__label">
+          <span class="subscribe__name">ТЕЛЕФОН</span>
+          <input id="phone-mask" class="subscribe__field" type="text" placeholder="+7 123 456-78-90">
+        </label>
+      </div>
+      <button class="subscribe__btn btn btn-reset btn-full">Отправить</button>
+    </form>
+  </section>
+</template>
+
+<script>
+export default {
+  name: "bsSubscribe"
+}
+</script>
