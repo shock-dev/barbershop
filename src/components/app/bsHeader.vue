@@ -14,10 +14,10 @@
               <router-link to="#" class="menu__link" active-class="active">НОВОСТИ</router-link>
             </li>
             <li class="menu__item">
-              <router-link to="#" class="menu__link" active-class="active">ПРАЙС-ЛИСТ</router-link>
+              <router-link to="/price" class="menu__link" active-class="active">ПРАЙС-ЛИСТ</router-link>
             </li>
             <li class="menu__item">
-              <router-link to="#" class="menu__link" active-class="active">МАГАЗИН</router-link>
+              <router-link to="/shop" class="menu__link" active-class="active">МАГАЗИН</router-link>
             </li>
             <li class="menu__item">
               <router-link to="#" class="menu__link" active-class="active">КОНТАКТЫ</router-link>
