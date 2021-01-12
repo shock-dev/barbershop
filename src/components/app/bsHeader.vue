@@ -3,15 +3,25 @@
     <div class="container">
       <div class="header__inner">
         <nav class="header__nav menu">
-          <a class="header__logo" href="#">
+          <router-link class="header__logo" :to="{ name: 'Home' }">
             <img src="~@/assets/img/logo.png" alt="Logo">
-          </a>
+          </router-link>
           <ul class="menu__list">
-            <li class="menu__item"><a href="#" class="menu__link">ИНФОРМАЦИЯ</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">НОВОСТИ</a></li>
-            <li class="menu__item active"><a href="#" class="menu__link">ПРАЙС-ЛИСТ</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">МАГАЗИН</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">КОНТАКТЫ</a></li>
+            <li class="menu__item">
+              <router-link to="#" class="menu__link" active-class="active">ИНФОРМАЦИЯ</router-link>
+            </li>
+            <li class="menu__item">
+              <router-link to="#" class="menu__link" active-class="active">НОВОСТИ</router-link>
+            </li>
+            <li class="menu__item">
+              <router-link to="#" class="menu__link" active-class="active">ПРАЙС-ЛИСТ</router-link>
+            </li>
+            <li class="menu__item">
+              <router-link to="#" class="menu__link" active-class="active">МАГАЗИН</router-link>
+            </li>
+            <li class="menu__item">
+              <router-link to="#" class="menu__link" active-class="active">КОНТАКТЫ</router-link>
+            </li>
             <li class="menu__item">
               <button class="header__btn btn-reset menu__item--btn">
                 Вход
@@ -21,7 +31,7 @@
         </nav>
         <button class="header__btn btn-reset">
           <svg class="header__btn-icon">
-            <use href="img/sprite.svg#login"></use>
+            <use href="~@/assets/img/sprite.svg#login"></use>
           </svg>
           Вход
         </button>

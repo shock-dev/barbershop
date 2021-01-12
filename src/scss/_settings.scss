@@ -49,6 +49,12 @@ img {
   max-width: 100%;
 }
 
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
   max-width: 970px;
   padding: 0 15px;
