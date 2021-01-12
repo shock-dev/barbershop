@@ -6,24 +6,24 @@
           <router-link class="header__logo" :to="{ name: 'Home' }">
             <img src="~@/assets/img/logo.png" alt="Logo">
           </router-link>
-          <ul class="menu__list" :class="{ active: burger }">
-            <li class="menu__item" @click="$emit('hideAll')">
+          <ul class="menu__list" :class="{ active: burgerMenu }">
+            <li class="menu__item" @click="hideAll">
               <router-link to="#" class="menu__link">ИНФОРМАЦИЯ</router-link>
             </li>
-            <li class="menu__item" @click="$emit('hideAll')">
+            <li class="menu__item" @click="hideAll">
               <router-link to="#" class="menu__link">НОВОСТИ</router-link>
             </li>
-            <li class="menu__item" @click="$emit('hideAll')">
+            <li class="menu__item" @click="hideAll">
               <router-link to="/price" class="menu__link" active-class="active">ПРАЙС-ЛИСТ</router-link>
             </li>
-            <li class="menu__item" @click="$emit('hideAll')">
+            <li class="menu__item" @click="hideAll">
               <router-link to="/shop" class="menu__link" active-class="active">МАГАЗИН</router-link>
             </li>
-            <li class="menu__item" @click="$emit('hideAll')">
+            <li class="menu__item" @click="hideAll">
               <router-link to="#" class="menu__link">КОНТАКТЫ</router-link>
             </li>
-            <li class="menu__item" @click="$emit('openModalFromBurgerMenu')">
-              <button class="header__btn btn-reset menu__item--btn">
+            <li class="menu__item">
+              <button class="header__btn btn-reset menu__item--btn" @click="openBurgerMenuFromMobile">
                 Вход
               </button>
             </li>
@@ -35,7 +35,7 @@
           </svg>
           Вход
         </button>
-        <button class="burger btn-reset" @click="openBurger">
+        <button class="burger btn-reset" @click="openBurgerMenu">
           <span></span>
           <span></span>
           <span></span>
@@ -46,22 +46,35 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
+
 export default {
   name: "bsHeader",
-  props: {
-    burger: {
-      type: Boolean,
-      default: false
-    }
+  computed: {
+    ...mapGetters(['burgerMenu'])
   },
   methods: {
-    openBurger() {
-      this.$emit('showOverlay')
-      this.$emit('openBurger')
-    },
+    ...mapMutations([
+      'toggleOverlay',
+      'toggleModal',
+      'toggleBurgerMenu',
+      'hideAll'
+    ]),
     openModal() {
-      this.$emit('showOverlay')
-      this.$emit('openModal')
+      this.toggleOverlay()
+      this.toggleModal()
+    },
+    openBurgerMenu() {
+      this.toggleOverlay()
+      this.toggleBurgerMenu()
+    },
+    openBurgerMenuFromMobile() {
+      this.hideAll()
+
+      setTimeout(() => {
+        this.toggleOverlay()
+        this.toggleModal()
+      }, 300)
     }
   }
 }

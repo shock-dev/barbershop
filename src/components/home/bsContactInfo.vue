@@ -12,14 +12,23 @@
       <li>ТЕЛЕФОН: +7 (495) 666-02-66</li>
     </ul>
     <div class="main-section__buttons contact-info__buttons">
-      <button id="openMapBtn" class="btn btn-reset">КАК ПРОЕХАТЬ</button>
+      <button id="openMapBtn" class="btn btn-reset" @click="openMap">КАК ПРОЕХАТЬ</button>
       <button class="btn btn-reset">ОБРАТНАЯ СВЯЗЬ</button>
     </div>
   </section>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
+
 export default {
-  name: "bsContactInfo"
+  name: "bsContactInfo",
+  methods: {
+    ...mapMutations(['toggleMap', 'toggleOverlay']),
+    openMap() {
+      this.toggleOverlay()
+      this.toggleMap()
+    }
+  }
 }
 </script>

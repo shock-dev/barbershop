@@ -1,7 +1,7 @@
 <template>
   <div class="modal__wrapper" :class="{ active: modal }">
     <div class="modal">
-      <button class="modal__close btn-reset" @click="$emit('closeModal')">
+      <button class="modal__close btn-reset" @click="closeModal">
         <svg>
           <use href="~@/assets/img/sprite.svg#close-icon"></use>
         </svg>
@@ -30,12 +30,18 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
+
 export default {
   name: "bsModalLogin",
-  props: {
-    modal: {
-      type: Boolean,
-      default: false
+  computed: {
+    ...mapGetters(['modal'])
+  },
+  methods: {
+    ...mapMutations(['toggleOverlay', 'toggleModal']),
+    closeModal() {
+      this.toggleOverlay()
+      this.toggleModal()
     }
   }
 }
