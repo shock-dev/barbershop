@@ -1,6 +1,6 @@
 <template>
   <div class="catalog__item card">
-    <router-link class="card__img" to="#">
+    <router-link class="card__img" to="/product">
       <img src="~@/assets/img/card-img-1.jpg" alt="">
     </router-link>
     <h3 class="card__title">Набор для путешествий «Baxter of California»</h3>

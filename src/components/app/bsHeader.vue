@@ -8,10 +8,10 @@
           </router-link>
           <ul class="menu__list">
             <li class="menu__item">
-              <router-link to="#" class="menu__link" active-class="active">ИНФОРМАЦИЯ</router-link>
+              <router-link to="#" class="menu__link">ИНФОРМАЦИЯ</router-link>
             </li>
             <li class="menu__item">
-              <router-link to="#" class="menu__link" active-class="active">НОВОСТИ</router-link>
+              <router-link to="#" class="menu__link">НОВОСТИ</router-link>
             </li>
             <li class="menu__item">
               <router-link to="/price" class="menu__link" active-class="active">ПРАЙС-ЛИСТ</router-link>
@@ -20,7 +20,7 @@
               <router-link to="/shop" class="menu__link" active-class="active">МАГАЗИН</router-link>
             </li>
             <li class="menu__item">
-              <router-link to="#" class="menu__link" active-class="active">КОНТАКТЫ</router-link>
+              <router-link to="#" class="menu__link">КОНТАКТЫ</router-link>
             </li>
             <li class="menu__item">
               <button class="header__btn btn-reset menu__item--btn">
