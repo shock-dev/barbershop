@@ -6,11 +6,11 @@
       <div class="subscribe__form-inner">
         <label class="subscribe__label">
           <span class="subscribe__name">ДАТА</span>
-          <input id="date-mask" class="subscribe__field" type="text" placeholder="08.10.2017">
+          <input id="date-mask" class="subscribe__field" type="text" v-facade="'##.##.####'" placeholder="08.10.2017">
         </label>
         <label class="subscribe__label">
           <span class="subscribe__name">ВРЕМЯ</span>
-          <input class="subscribe__field" type="text" placeholder="10:00">
+          <input class="subscribe__field" type="text" v-facade="'##:##'" placeholder="10:00">
         </label>
         <label class="subscribe__label">
           <span class="subscribe__name">ВАШЕ ИМЯ</span>
@@ -18,7 +18,7 @@
         </label>
         <label class="subscribe__label">
           <span class="subscribe__name">ТЕЛЕФОН</span>
-          <input id="phone-mask" class="subscribe__field" type="text" placeholder="+7 123 456-78-90">
+          <input id="phone-mask" class="subscribe__field" type="text" v-facade="'+7 ### ###-##-##'" placeholder="+7 123 456-78-90">
         </label>
       </div>
       <button class="subscribe__btn btn btn-reset btn-full">Отправить</button>
@@ -27,7 +27,10 @@
 </template>
 
 <script>
+import { facade } from 'vue-input-facade'
+
 export default {
-  name: "bsSubscribe"
+  name: "bsSubscribe",
+  directives: { facade },
 }
 </script>
