@@ -61,10 +61,12 @@ export default {
       'hideAll'
     ]),
     openModal() {
+      document.body.classList.add('lock')
       this.toggleOverlay()
       this.toggleModal()
     },
     openBurgerMenu() {
+      document.body.classList.add('lock')
       this.toggleOverlay()
       this.toggleBurgerMenu()
     },
@@ -72,6 +74,7 @@ export default {
       this.hideAll()
 
       setTimeout(() => {
+        document.body.classList.add('lock')
         this.toggleOverlay()
         this.toggleModal()
       }, 300)

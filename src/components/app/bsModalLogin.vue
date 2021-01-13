@@ -40,6 +40,7 @@ export default {
   methods: {
     ...mapMutations(['toggleOverlay', 'toggleModal']),
     closeModal() {
+      document.body.classList.remove('lock')
       this.toggleOverlay()
       this.toggleModal()
     }

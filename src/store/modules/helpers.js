@@ -19,10 +19,11 @@ export default {
             state.map = !state.map
         },
         hideAll(state) {
-            if (state.modal) state.modal = false
-            if (state.overlay) state.overlay = false
-            if (state.burgerMenu) state.burgerMenu = false
-            if (state.map) state.map = false
+            document.body.classList.remove('lock')
+            state.modal = false
+            state.overlay = false
+            state.burgerMenu = false
+            state.map = false
         }
     },
     getters: {

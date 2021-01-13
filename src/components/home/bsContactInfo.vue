@@ -26,6 +26,7 @@ export default {
   methods: {
     ...mapMutations(['toggleMap', 'toggleOverlay']),
     openMap() {
+      document.body.classList.add('lock')
       this.toggleOverlay()
       this.toggleMap()
     }
