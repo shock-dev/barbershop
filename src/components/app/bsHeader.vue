@@ -7,6 +7,9 @@
             <img src="~@/assets/img/logo.png" alt="Logo">
           </router-link>
           <ul class="menu__list" :class="{ active: burgerMenu }">
+            <li class="menu__cancel">
+              <button class="btn-reset" @click="hideAll"></button>
+            </li>
             <li class="menu__item" @click="hideAll">
               <router-link to="#" class="menu__link">ИНФОРМАЦИЯ</router-link>
             </li>
