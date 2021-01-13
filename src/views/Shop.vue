@@ -1,7 +1,14 @@
 <template>
   <main class="page">
     <div class="container">
-      <h2 class="page__title">СРЕДСТВА ДЛЯ УХОДА</h2>
+      <div class="shop__head">
+        <h2 class="page__title shop__title">СРЕДСТВА ДЛЯ УХОДА</h2>
+        <button class="shop__button-filter btn-reset">
+          <svg class="">
+              <use href="~@/assets/img/sprite.svg#filter"></use>
+          </svg>
+        </button>
+      </div>
       <bs-breadcrumbs/>
       <div class="shop-wrapper">
         <bs-sidebar/>
