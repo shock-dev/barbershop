@@ -4,7 +4,7 @@
       <Intro />
       <Advantages :list="advantages" />
       <div class="main-section-wrapper bottom-line">
-        <News />
+        <News :list="news" />
         <Gallery />
       </div>
       <div class="main-section-wrapper">
@@ -28,6 +28,7 @@ import Subscribe from '@/components/home/Subscribe'
 
 // Resources
 import { advantages } from '@/resources/advantages'
+import { news } from '@/resources/news'
 
 export default {
   name: 'Home',
@@ -42,7 +43,8 @@ export default {
   },
   data() {
     return {
-      advantages
+      advantages,
+      news
     }
   }
 }
