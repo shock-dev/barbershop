@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="page__title">ПРАЙС-ЛИСТ</h2>
 
-      <bs-breadcrumbs/>
+      <Breadcrumbs/>
 
       <h2 class="price-page__title">ИСТИННО МУЖСКАЯ КЛАССИКА</h2>
 
@@ -58,12 +58,14 @@
 </template>
 
 <script>
-import BsBreadcrumbs from "@/components/app/bsBreadcrumbs";
+import Breadcrumbs from "@/components/app/Breadcrumbs";
+import { setMeta } from '@/settings/meta';
 
 export default {
   name: "Price",
+  metaInfo: setMeta('Прайс-лист'),
   components: {
-    BsBreadcrumbs
+    Breadcrumbs
   }
 }
 </script>

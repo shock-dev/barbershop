@@ -6,7 +6,7 @@
 import { mapGetters, mapMutations } from 'vuex'
 
 export default {
-  name: "overlay",
+  name: "Overlay",
   computed: {
     ...mapGetters(['overlay'])
   },

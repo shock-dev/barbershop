@@ -3,7 +3,7 @@
     <div class="modal">
       <button class="modal__close btn-reset" @click="closeModal">
         <svg>
-          <use href="~@/assets/img/sprite.svg#close-icon"></use>
+          <use href="~@/assets/img/[icons].svg#close-icon"></use>
         </svg>
       </button>
       <div class="modal__title">ЛИЧНЫЙ КАБИНЕТ</div>
@@ -23,7 +23,9 @@
           </label>
           <router-link class="modal__forgot-password" to="#">Я ЗАБЫЛ ПАРОЛЬ!</router-link>
         </div>
-        <button class="btn btn-reset btn-full">Войти</button>
+        <Button full>
+          Войти
+        </Button>
       </form>
     </div>
   </div>
@@ -31,9 +33,11 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
+import Button from '@/components/app/Button'
 
 export default {
-  name: "bsModalLogin",
+  name: "ModalLogin",
+  components: { Button },
   computed: {
     ...mapGetters(['modal'])
   },

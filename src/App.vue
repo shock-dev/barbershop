@@ -1,32 +1,32 @@
 <template>
   <div id="app" class="app">
     <!--  Main content  -->
-    <bs-header/>
+    <Header/>
     <router-view/>
-    <bs-footer/>
+    <Footer/>
 
     <!--  Additional  -->
     <overlay/>
-    <bs-modal-login/>
-    <bs-map/>
+    <ModalLogin/>
+    <Map/>
   </div>
 </template>
 
 <script>
-import BsHeader from "@/components/app/bsHeader";
-import BsFooter from "@/components/app/bsFooter";
-import BsModalLogin from "@/components/app/bsModalLogin";
-import { mapGetters, mapMutations } from 'vuex';
-import Overlay from "@/components/app/overlay";
-import BsMap from "@/components/home/bsMap";
+import { mapGetters, mapMutations } from 'vuex'
+import Header from "@/components/app/Header"
+import Footer from "@/components/app/Footer"
+import ModalLogin from "@/components/app/ModalLogin"
+import Overlay from "@/components/app/Overlay"
+import Map from "@/components/home/Map"
 
 export default {
   components: {
-    BsMap,
+    Map,
     Overlay,
-    BsModalLogin,
-    BsFooter,
-    BsHeader
+    ModalLogin,
+    Footer,
+    Header
   },
   computed: {
     ...mapGetters(['overlay', 'map'])
@@ -36,7 +36,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@import "scss/index.scss";
-</style>

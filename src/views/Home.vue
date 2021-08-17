@@ -1,37 +1,55 @@
 <template>
   <main class="main">
     <div class="container">
-      <bs-intro/>
-      <bs-advantages/>
+      <Intro />
+      <Advantages :list="advantages" />
       <div class="main-section-wrapper bottom-line">
-        <bs-news/>
-        <bs-gallery/>
+        <News :list="news" />
+        <Gallery :list="gallery" />
       </div>
       <div class="main-section-wrapper">
-        <bs-contact-info/>
-        <bs-subscribe/>
+        <Contacts :list="contacts" />
+        <Subscribe />
       </div>
     </div>
   </main>
 </template>
 
 <script>
-import BsIntro from "@/components/home/bsIntro";
-import BsAdvantages from "@/components/home/bsAdvantages";
-import BsNews from "@/components/home/bsNews";
-import BsGallery from "@/components/home/bsGallery";
-import BsContactInfo from "@/components/home/bsContactInfo";
-import BsSubscribe from "@/components/home/bsSubscribe";
+import { setMeta } from '@/settings/meta'
+
+// Components
+import Intro from '@/components/home/Intro'
+import Advantages from '@/components/home/Advantages'
+import News from '@/components/home/News'
+import Gallery from '@/components/home/Gallery'
+import Contacts from '@/components/home/Contacts'
+import Subscribe from '@/components/home/Subscribe'
+
+// Resources
+import { advantages } from '@/resources/advantages'
+import { gallery } from '@/resources/gallery'
+import { news } from '@/resources/news'
+import { contacts } from '@/resources/contacts'
 
 export default {
   name: 'Home',
+  metaInfo: setMeta('Главная'),
   components: {
-    BsSubscribe,
-    BsContactInfo,
-    BsGallery,
-    BsNews,
-    BsAdvantages,
-    BsIntro
+    Subscribe,
+    Contacts,
+    Gallery,
+    News,
+    Advantages,
+    Intro
+  },
+  data() {
+    return {
+      advantages,
+      gallery,
+      news,
+      contacts
+    }
   }
 }
 </script>
