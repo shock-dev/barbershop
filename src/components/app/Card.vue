@@ -6,14 +6,19 @@
     <h3 class="card__title">{{ title }}</h3>
     <div class="card__footer">
       <div class="card__price">2 900 ₽</div>
-      <button class="btn btn-reset card__btn">Купить</button>
+      <Button class="card__btn">
+        Купить
+      </Button>
     </div>
   </div>
 </template>
 
 <script>
+import Button from '@/components/app/Button'
+
 export default {
   name: "Card",
+  components: { Button },
   props: {
     title: String,
     price: Number,

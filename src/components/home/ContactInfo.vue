@@ -12,17 +12,23 @@
       <li>ТЕЛЕФОН: +7 (495) 666-02-66</li>
     </ul>
     <div class="main-section__buttons contact-info__buttons">
-      <button id="openMapBtn" class="btn btn-reset" @click="openMap">КАК ПРОЕХАТЬ</button>
-      <button class="btn btn-reset">ОБРАТНАЯ СВЯЗЬ</button>
+      <Button @click="openMap">
+        Как проехать
+      </Button>
+      <Button>
+        Обратная связь
+      </Button>
     </div>
   </section>
 </template>
 
 <script>
 import { mapMutations } from 'vuex'
+import Button from '@/components/app/Button';
 
 export default {
   name: "ContactInfo",
+  components: { Button },
   methods: {
     ...mapMutations(['toggleMap', 'toggleOverlay']),
     openMap() {

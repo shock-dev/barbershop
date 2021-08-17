@@ -25,7 +25,7 @@ import {
 import 'hooper/dist/hooper.css';
 
 export default {
-  name: "bsGallery",
+  name: "Gallery",
   components: {
     Hooper,
     Slide,

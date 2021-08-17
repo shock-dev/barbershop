@@ -1,15 +1,15 @@
 <template>
   <main class="main">
     <div class="container">
-      <Intro/>
-      <Advantages/>
+      <Intro />
+      <Advantages />
       <div class="main-section-wrapper bottom-line">
-        <News/>
-        <Gallery/>
+        <News />
+        <Gallery />
       </div>
       <div class="main-section-wrapper">
-        <ContactInfo/>
-        <Subscribe/>
+        <ContactInfo />
+        <Subscribe />
       </div>
     </div>
   </main>

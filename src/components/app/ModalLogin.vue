@@ -23,7 +23,9 @@
           </label>
           <router-link class="modal__forgot-password" to="#">Я ЗАБЫЛ ПАРОЛЬ!</router-link>
         </div>
-        <button class="btn btn-reset btn-full">Войти</button>
+        <Button full>
+          Войти
+        </Button>
       </form>
     </div>
   </div>
@@ -31,9 +33,11 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
+import Button from '@/components/app/Button'
 
 export default {
   name: "ModalLogin",
+  components: { Button },
   computed: {
     ...mapGetters(['modal'])
   },

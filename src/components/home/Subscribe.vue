@@ -21,16 +21,20 @@
           <input id="phone-mask" class="subscribe__field" type="text" v-facade="'+7 ### ###-##-##'" placeholder="+7 123 456-78-90">
         </label>
       </div>
-      <button class="subscribe__btn btn btn-reset btn-full">Отправить</button>
+      <Button :style="{ marginTop: '20px' }" full>
+        Отправить
+      </Button>
     </form>
   </section>
 </template>
 
 <script>
 import { facade } from 'vue-input-facade'
+import Button from '@/components/app/Button';
 
 export default {
   name: "Subscribe",
+  components: { Button },
   directives: { facade }
 }
 </script>

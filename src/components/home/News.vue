@@ -5,12 +5,17 @@
     <time class="news__date" datetime="2021-01-11">11 января</time>
     <p class="main-section__text news__text">В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ СТРОЙНЫЕ РЯДЫ</p>
     <time class="news__date" datetime="2021-01-18">18 января</time>
-    <button class="btn btn-reset">ВСЕ НОВОСТИ</button>
+    <Button>
+      Все новости
+    </Button>
   </section>
 </template>
 
 <script>
+import Button from '@/components/app/Button'
+
 export default {
-  name: "News"
+  name: "News",
+  components: { Button }
 }
 </script>
