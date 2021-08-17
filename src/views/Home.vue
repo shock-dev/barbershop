@@ -2,7 +2,7 @@
   <main class="main">
     <div class="container">
       <Intro />
-      <Advantages />
+      <Advantages :list="advantages" />
       <div class="main-section-wrapper bottom-line">
         <News />
         <Gallery />
@@ -16,13 +16,18 @@
 </template>
 
 <script>
-import Intro from "@/components/home/Intro";
-import Advantages from "@/components/home/Advantages";
-import News from "@/components/home/News";
-import Gallery from "@/components/home/Gallery";
-import ContactInfo from "@/components/home/ContactInfo";
-import Subscribe from "@/components/home/Subscribe";
-import { setMeta } from '@/settings/meta';
+import { setMeta } from '@/settings/meta'
+
+// Components
+import Intro from '@/components/home/Intro'
+import Advantages from '@/components/home/Advantages'
+import News from '@/components/home/News'
+import Gallery from '@/components/home/Gallery'
+import ContactInfo from '@/components/home/ContactInfo'
+import Subscribe from '@/components/home/Subscribe'
+
+// Resources
+import { advantages } from '@/resources/advantages'
 
 export default {
   name: 'Home',
@@ -34,6 +39,11 @@ export default {
     News,
     Advantages,
     Intro
+  },
+  data() {
+    return {
+      advantages
+    }
   }
 }
 </script>
