@@ -1,15 +1,9 @@
 <template>
   <section class="main-section gallery">
-    <h3 class="main-section__title gallery__title">ФОТОГАЛЕРЕЯ</h3>
+    <h3 class="main-section__title">ФОТОГАЛЕРЕЯ</h3>
     <hooper>
-      <slide>
-        <img src="~@/assets/img/gallery-img.jpg" alt="">
-      </slide>
-      <slide>
-        <img src="~@/assets/img/gallery-img.jpg" alt="">
-      </slide>
-      <slide>
-        <img src="~@/assets/img/gallery-img.jpg" alt="">
+      <slide v-for="(item, index) in list" :key="index">
+        <img :src="require(`@/assets/img/gallery/${item.file}`)" alt="">
       </slide>
       <hooper-navigation slot="hooper-addons"></hooper-navigation>
     </hooper>
@@ -25,11 +19,14 @@ import {
 import 'hooper/dist/hooper.css';
 
 export default {
-  name: "Gallery",
+  name: 'Gallery',
   components: {
     Hooper,
     Slide,
     HooperNavigation
+  },
+  props: {
+    list: Array
   }
 }
 </script>

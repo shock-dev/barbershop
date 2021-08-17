@@ -1,4 +1,4 @@
-export const menuLinks = [
+export const menu = [
   {
     url: '/price',
     title: 'Прайс-лист'

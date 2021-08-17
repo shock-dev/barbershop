@@ -12,7 +12,7 @@
       <Breadcrumbs :list="breadcrumbsList" />
       <div class="shop-wrapper">
         <Sidebar />
-        <Catalog />
+        <Catalog :list="products" />
       </div>
     </div>
   </main>
@@ -20,10 +20,15 @@
 
 <script>
 import { mapMutations } from 'vuex'
-import Breadcrumbs from "@/components/app/Breadcrumbs";
-import Sidebar from "@/components/shop/Sidebar";
-import Catalog from "@/components/shop/Catalog";
 import { setMeta } from '@/settings/meta';
+
+//Components
+import Breadcrumbs from '@/components/app/Breadcrumbs'
+import Sidebar from '@/components/shop/Sidebar'
+import Catalog from '@/components/shop/Catalog'
+
+// Resources
+import { products } from '@/resources/products'
 
 export default {
   name: "Shop",
@@ -43,7 +48,8 @@ export default {
         {
           title: 'Прайс-лист'
         }
-      ]
+      ],
+      products
     }
   },
   methods: {

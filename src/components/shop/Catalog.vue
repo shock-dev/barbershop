@@ -2,27 +2,27 @@
   <div class="catalog">
     <div class="catalog__items">
       <Card
-        v-for="({ title, price, imageUrl }, index) in products"
+        v-for="(item, index) in list"
         :key="index"
-        :title="title"
-        :price="price"
-        :imageUrl="imageUrl"
+        :title="item.title"
+        :price="item.price"
+        :file="item.file"
       />
     </div>
-    <Pagination/>
+    <Pagination />
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import Pagination from "@/components/app/Pagination";
-import Card from "@/components/app/Card";
+// Components
+import Pagination from "@/components/app/Pagination"
+import Card from "@/components/app/Card"
 
 export default {
-  name: "Catalog",
+  name: 'Catalog',
   components: { Card, Pagination },
-  computed: {
-    ...mapGetters(['products'])
+  props: {
+    list: Array
   }
 }
 </script>

@@ -49,7 +49,7 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
-import { menuLinks } from '@/resources/menu'
+import { menu } from '@/resources/menu'
 import Logo from '@/components/app/Logo';
 
 export default {
@@ -57,7 +57,7 @@ export default {
   components: { Logo },
   data() {
     return {
-      links: menuLinks
+      links: menu
     }
   },
   computed: {
