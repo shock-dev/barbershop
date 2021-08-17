@@ -30,7 +30,7 @@
 import { facade } from 'vue-input-facade'
 
 export default {
-  name: "bsSubscribe",
-  directives: { facade },
+  name: "Subscribe",
+  directives: { facade }
 }
 </script>

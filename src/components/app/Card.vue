@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "bsCard",
+  name: "Card",
   props: {
     title: String,
     price: Number,

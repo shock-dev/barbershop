@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: "bsIntro"
+  name: "Intro"
 }
 </script>

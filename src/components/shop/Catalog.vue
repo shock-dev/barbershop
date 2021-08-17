@@ -1,7 +1,7 @@
 <template>
   <div class="catalog">
     <div class="catalog__items">
-      <bs-card
+      <Card
         v-for="({ title, price, imageUrl }, index) in products"
         :key="index"
         :title="title"
@@ -9,21 +9,18 @@
         :imageUrl="imageUrl"
       />
     </div>
-    <bs-pagination/>
+    <Pagination/>
   </div>
 </template>
 
 <script>
-import BsPagination from "@/components/app/bsPagination";
-import BsCard from "@/components/app/bsCard";
 import { mapGetters } from 'vuex'
+import Pagination from "@/components/app/Pagination";
+import Card from "@/components/app/Card";
 
 export default {
-  name: "bsCatalog",
-  components: {
-    BsCard,
-    BsPagination
-  },
+  name: "Catalog",
+  components: { Card, Pagination },
   computed: {
     ...mapGetters(['products'])
   }

@@ -14,21 +14,21 @@
             <li class="footer__social-item">
               <a href="#">
                 <svg class="vk">
-                  <use href="~@/assets/img/sprite.svg#vk"></use>
+                  <use href="~@/assets/img/[icons].svg#vk"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__social-item">
               <a href="#">
                 <svg class="facebook">
-                  <use href="~@/assets/img/sprite.svg#facebook"></use>
+                  <use href="~@/assets/img/[icons].svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__social-item">
               <a href="#">
                 <svg class="instagram">
-                  <use href="~@/assets/img/sprite.svg#instagram"></use>
+                  <use href="~@/assets/img/[icons].svg#instagram"></use>
                 </svg>
               </a>
             </li>
@@ -41,6 +41,6 @@
 
 <script>
 export default {
-  name: "bsFooter"
+  name: "Footer"
 }
 </script>

@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: "bsNews"
+  name: "News"
 }
 </script>

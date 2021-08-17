@@ -65,7 +65,7 @@
 import { mapGetters, mapMutations } from 'vuex'
 
 export default {
-  name: "bsSidebar",
+  name: "Sidebar",
   computed: {
     ...mapGetters(['filterPanelMobile'])
   },

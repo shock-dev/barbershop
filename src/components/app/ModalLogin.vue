@@ -3,7 +3,7 @@
     <div class="modal">
       <button class="modal__close btn-reset" @click="closeModal">
         <svg>
-          <use href="~@/assets/img/sprite.svg#close-icon"></use>
+          <use href="~@/assets/img/[icons].svg#close-icon"></use>
         </svg>
       </button>
       <div class="modal__title">ЛИЧНЫЙ КАБИНЕТ</div>
@@ -33,7 +33,7 @@
 import { mapGetters, mapMutations } from 'vuex'
 
 export default {
-  name: "bsModalLogin",
+  name: "ModalLogin",
   computed: {
     ...mapGetters(['modal'])
   },

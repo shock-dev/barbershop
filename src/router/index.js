@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/price',
     name: 'Price',
-      component: () => import('../views/Price')
+    component: () => import('../views/Price')
   },
   {
     path: '/shop',

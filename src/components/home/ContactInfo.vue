@@ -22,7 +22,7 @@
 import { mapMutations } from 'vuex'
 
 export default {
-  name: "bsContactInfo",
+  name: "ContactInfo",
   methods: {
     ...mapMutations(['toggleMap', 'toggleOverlay']),
     openMap() {

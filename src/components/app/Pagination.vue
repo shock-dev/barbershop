@@ -17,10 +17,6 @@
 
 <script>
 export default {
-name: "bsPagination"
+name: "Pagination"
 }
 </script>
-
-<style scoped>
-
-</style>
