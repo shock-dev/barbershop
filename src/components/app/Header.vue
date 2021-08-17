@@ -50,7 +50,7 @@
 <script>
 import { mapGetters, mapMutations } from 'vuex'
 import { menu } from '@/resources/menu'
-import Logo from '@/components/app/Logo';
+import Logo from '@/components/app/Logo'
 
 export default {
   name: "Header",

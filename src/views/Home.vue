@@ -1,18 +1,16 @@
 <template>
-  <main class="main">
-    <div class="container">
-      <Intro />
-      <Advantages :list="advantages" />
-      <div class="main-section-wrapper bottom-line">
-        <News :list="news" />
-        <Gallery :list="gallery" />
-      </div>
-      <div class="main-section-wrapper">
-        <Contacts :list="contacts" />
-        <Subscribe />
-      </div>
+  <div>
+    <Intro />
+    <Advantages :list="advantages" />
+    <div class="main-section-wrapper bottom-line">
+      <News :list="news" />
+      <Gallery :list="gallery" />
     </div>
-  </main>
+    <div class="main-section-wrapper">
+      <Contacts :list="contacts" />
+      <Subscribe />
+    </div>
+  </div>
 </template>
 
 <script>
