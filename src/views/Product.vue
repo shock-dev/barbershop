@@ -1,9 +1,9 @@
 <template>
   <main class="page">
     <div class="container">
-      <h2 class="page__title">набор для путешествий «Baxter of California»</h2>
+      <h2 class="page__title">Набор для путешествий «Baxter of California»</h2>
 
-      <bs-breadcrumbs/>
+      <Breadcrumbs :list="breadcrumbsList" />
 
       <div class="product__wrapper">
         <div class="product__images">
@@ -54,12 +54,25 @@
 </template>
 
 <script>
-import BsBreadcrumbs from "@/components/app/bsBreadcrumbs";
+import Breadcrumbs from "@/components/app/Breadcrumbs";
+import { setMeta } from '@/settings/meta';
 
 export default {
   name: "Product",
-  components: {
-    BsBreadcrumbs
+  metaInfo: setMeta('Набор для путешествий «Baxter of California»'),
+  components: { Breadcrumbs },
+  data() {
+    return {
+      breadcrumbsList: [
+        {
+          url: '/shop',
+          title: 'Главная'
+        },
+        {
+          title: 'НАБОР ДЛЯ ПУТЕШЕСТВИЙ «BAXTER OF CALIFORNIA»'
+        }
+      ]
+    }
   }
 }
 </script>
