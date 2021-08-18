@@ -1,24 +1,30 @@
 # barbershop
 
-## Project setup
-```
-npm install
+## [Demo](https://barbershop-tau.vercel.app/)
+![Barbershop](./screen.jpg)
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/shock-dev/barbershop.git
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+Go to the project directory
+
+```bash
+  cd barbershop
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+Install dependencies
+
+```bash
+  npm install
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+Start the server
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```bash
+  npm run start
+```
