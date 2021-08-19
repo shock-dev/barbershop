@@ -1,6 +1,6 @@
 <template>
-  <aside class="sidebar" :class="{ active: filterPanelMobile }">
-    <button class="sidebar__cancel btn-reset" @click="hideAll"></button>
+  <aside class="sidebar">
+    <button class="sidebar__cancel btn-reset"></button>
     <div class="sidebar__title">ПРОИЗВОДИТЕЛИ:</div>
     <div class="sidebar__group">
       <label class="sidebar__label">
@@ -62,15 +62,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
-
 export default {
-  name: "Sidebar",
-  computed: {
-    ...mapGetters(['filterPanelMobile'])
-  },
-  methods: {
-    ...mapMutations(['hideAll'])
-  }
+  name: 'Sidebar'
 }
 </script>

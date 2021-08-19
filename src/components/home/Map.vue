@@ -6,17 +6,36 @@
     allowfullscreen=""
     aria-hidden="false"
     tabindex="0"
-    :class="{ active: map }"
+    :class="{ active: isOpen }"
   />
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
   name: "Map",
-  computed: {
-    ...mapGetters(['map'])
+  props: {
+    isOpen: { type: Boolean, default: false }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.map {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  left: 0;
+  z-index: 130;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  visibility: hidden;
+  opacity: 0;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+</style>
