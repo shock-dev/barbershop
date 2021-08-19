@@ -1,7 +1,12 @@
 <template>
   <label class="label">
-    <input class="real" type="checkbox" checked>
-    <span class="fake"></span>
+    <input
+      class="real"
+      type="checkbox"
+      :name="name"
+      v-model="model"
+    >
+    <span class="fake" />
     <span class="text">{{ text }}</span>
   </label>
 </template>
@@ -9,8 +14,24 @@
 <script>
 export default {
   name: 'Checkbox',
+  model: {
+    prop: 'checked',
+    event: 'change'
+  },
   props: {
-    text: String
+    name: String,
+    text: String,
+    checked: Boolean
+  },
+  computed: {
+    model: {
+      get () {
+        return this.checked
+      },
+      set (val) {
+        this.$emit('change', val)
+      }
+    }
   }
 }
 </script>
@@ -39,8 +60,8 @@ export default {
   opacity: 0;
   appearance: none;
 
-  *:checked + .fake:before,
-  *:checked + .fake:after {
+  &:checked + .fake:before,
+  &:checked + .fake:after {
     display: block;
   }
 }
@@ -77,5 +98,6 @@ export default {
 .text {
   line-height: 18px;
   transition: color .2s;
+  user-select: none;
 }
 </style>
