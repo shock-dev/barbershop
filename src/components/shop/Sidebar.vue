@@ -38,3 +38,46 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.sidebar {
+  width: 240px;
+  padding-right: 20px;
+  margin-right: 50px;
+
+  &__title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__cancel {
+    display: none;
+  }
+
+  &__group {
+    margin-bottom: 50px;
+  }
+
+  &__label {
+
+    &:not(.disabled):hover {
+      .sidebar__checkbox-text {
+        color: #663D15;
+      }
+
+      .sidebar__radio-text {
+        color: #663D15;
+      }
+    }
+
+    &.disabled {
+      pointer-events: none;
+    }
+  }
+
+  .disabled {
+    opacity: .3;
+  }
+}
+</style>

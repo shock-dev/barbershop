@@ -135,10 +135,6 @@
   .sidebar__group:not(:last-child) {
     margin-bottom: 50px;
   }
-
-  .shop__button-filter {
-    display: block;
-  }
 }
 
 @media (max-width: 700px) {
@@ -317,11 +313,6 @@
   .map {
     width: 80%;
     height: 70%;
-  }
-
-  .shop__title {
-    font-size: 26px;
-    line-height: 32px;
   }
 }
 

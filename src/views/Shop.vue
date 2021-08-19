@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div class="shop__head">
-      <Title>Средства для ухода</Title>
-      <button class="shop__button-filter" @click="openSidebar">
-        <svg class="">
+    <div class="head">
+      <Title class="title">Средства для ухода</Title>
+      <button class="filter" @click="openSidebar">
+        <svg>
           <use href="~@/assets/img/[icons].svg#filter"></use>
         </svg>
       </button>
     </div>
     <Breadcrumbs :list="breadcrumbsList" />
-    <div class="shop-wrapper">
+    <div class="wrapper">
       <Overlay
         :isOpen="isOpenSidebar"
         @click="closeSidebar"
@@ -80,3 +80,45 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.head {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.title {
+  padding-top: 0;
+}
+
+.filter {
+  width: 40px;
+  height: 40px;
+  outline: none;
+  display: none;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .filter {
+    display: block;
+  }
+}
+
+@media (max-width: 380px) {
+  .title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+</style>
