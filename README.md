@@ -1,4 +1,6 @@
-![Barbershop](./intro.png)
+<p align="center">
+  <img src="./intro.png" />
+</p>
 
 # Barbershop
 
