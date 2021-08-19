@@ -1,94 +1,133 @@
 <template>
   <header class="header">
-    <div class="container">
-      <div class="header__inner">
-        <router-link class="header__logo" :to="{ name: 'Home' }">
+    <div class="container" style="max-width: 1010px">
+      <div class="inner">
+        <router-link
+          class="logo"
+          :to="{ name: 'Home' }"
+        >
           <Logo />
         </router-link>
-        <nav class="header__nav menu">
-          <ul class="menu__list" :class="{ active: burgerMenu }">
-            <li class="menu__cancel">
-              <button class="btn-reset" @click="hideAll"></button>
-            </li>
-            <li
-              v-for="(link, index) in links"
-              :key="index"
-              class="menu__item"
-              @click="hideAll"
-            >
-              <router-link
-                class="menu__link"
-                active-class="active"
-                :to="link.url"
-              >
-                {{ link.title }}
-              </router-link>
-            </li>
-            <li class="menu__item">
-              <button class="header__btn btn-reset menu__item--btn" @click="openBurgerMenuFromMobile">
-                Вход
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <button class="header__btn btn-reset" @click="openModal">
-          <svg class="header__btn-icon">
-            <use href="~@/assets/img/[icons].svg#login"></use>
+
+        <Overlay
+          :isOpen="isOpenBurgerMenu"
+          @click="closeBurgerMenu"
+        />
+        <Menu
+          :list="links"
+          :isOpen="isOpenBurgerMenu"
+          @closeBurger="closeBurgerMenu"
+          @onMobileLogin="openModalFromMobile"
+        />
+
+        <button
+          class="login"
+          @click="$emit('openModal')"
+        >
+          <svg class="login__icon">
+            <use href="~@/assets/img/[icons].svg#login" />
           </svg>
           Вход
         </button>
-        <button class="burger btn-reset" @click="openBurgerMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <Burger @click="openBurgerMenu" />
       </div>
     </div>
   </header>
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex'
+import { allowScroll, stopScroll } from '@/utils/scroll'
+
+// Resources
 import { menu } from '@/resources/menu'
+
+// Components
 import Logo from '@/components/app/Logo'
+import Burger from '@/components/app/Burger'
+import Menu from '@/components/app/Menu'
+import Overlay from '@/components/app/Overlay';
 
 export default {
-  name: "Header",
-  components: { Logo },
+  name: 'Header',
+  components: { Overlay, Menu, Burger, Logo },
   data() {
     return {
+      isOpenBurgerMenu: false,
       links: menu
     }
   },
-  computed: {
-    ...mapGetters(['burgerMenu'])
-  },
   methods: {
-    ...mapMutations([
-      'toggleOverlay',
-      'toggleModal',
-      'toggleBurgerMenu',
-      'hideAll'
-    ]),
-    openModal() {
-      document.body.classList.add('lock')
-      this.toggleOverlay()
-      this.toggleModal()
-    },
     openBurgerMenu() {
-      document.body.classList.add('lock')
-      this.toggleOverlay()
-      this.toggleBurgerMenu()
+      this.isOpenBurgerMenu = true
+      stopScroll()
     },
-    openBurgerMenuFromMobile() {
-      this.hideAll()
-
-      setTimeout(() => {
-        document.body.classList.add('lock')
-        this.toggleOverlay()
-        this.toggleModal()
-      }, 300)
+    closeBurgerMenu() {
+      this.isOpenBurgerMenu = false
+      allowScroll()
+    },
+    openModalFromMobile() {
+      this.isOpenBurgerMenu = false
+      stopScroll()
+      this.$emit('openModal')
     }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.header {
+  background-color: #000;
+  color: #fff;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  min-height: 59px;
+}
+
+.logo {
+  display: flex;
+  align-self: center;
+  margin-right: 20px;
+  padding-top: 5px;
+}
+
+.nav {
+  display: flex;
+}
+
+.login {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: background-color .2s;
+  font-size: 16px;
+  line-height: 20px;
+  outline: none;
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 16px;
+    fill: rgba(#fff, .1);
+    transition: fill .2s;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba(#fff, .1);
+
+    .login__icon {
+      fill: rgba(#fff, 1);
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .login {
+    display: none;
+  }
+}
+</style>

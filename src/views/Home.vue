@@ -7,9 +7,18 @@
       <Gallery :list="gallery" />
     </div>
     <div class="main-section-wrapper">
-      <Contacts :list="contacts" />
+      <Contacts
+        :list="contacts"
+        @openMap="openMap"
+      />
       <Subscribe />
     </div>
+    <Overlay
+      :isOpen="isMapOpen"
+      @click="closeMap"
+    >
+      <Map :isOpen="isMapOpen" />
+    </Overlay>
   </div>
 </template>
 
@@ -29,11 +38,15 @@ import { advantages } from '@/resources/advantages'
 import { gallery } from '@/resources/gallery'
 import { news } from '@/resources/news'
 import { contacts } from '@/resources/contacts'
+import Overlay from '@/components/app/Overlay';
+import Map from '@/components/home/Map';
 
 export default {
   name: 'Home',
   metaInfo: setMeta('Главная'),
   components: {
+    Map,
+    Overlay,
     Subscribe,
     Contacts,
     Gallery,
@@ -43,10 +56,21 @@ export default {
   },
   data() {
     return {
+      isMapOpen: false,
       advantages,
       gallery,
       news,
       contacts
+    }
+  },
+  methods: {
+    openMap() {
+      this.isMapOpen = true
+      document.body.style.overflow = 'hidden'
+    },
+    closeMap() {
+      this.isMapOpen = false
+      document.body.style.overflow = 'auto'
     }
   }
 }

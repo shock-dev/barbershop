@@ -10,7 +10,7 @@
       :style="{ marginBottom: '20px' }"
     />
     <div class="main-section__buttons contact-info__buttons">
-      <Button @click="openMap">
+      <Button @click="$emit('openMap')">
         Как проехать
       </Button>
       <Button>
@@ -21,8 +21,6 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
-
 // Components
 import Button from '@/components/app/Button'
 import ContactsItem from '@/components/home/ContactsItem'
@@ -32,14 +30,6 @@ export default {
   components: { ContactsItem, Button },
   props: {
     list: Array
-  },
-  methods: {
-    ...mapMutations(['toggleMap', 'toggleOverlay']),
-    openMap() {
-      document.body.classList.add('lock')
-      this.toggleOverlay()
-      this.toggleMap()
-    }
   }
 }
 </script>
