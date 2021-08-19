@@ -48,7 +48,7 @@ import Footer from '@/components/app/Footer'
 import Overlay from '@/components/app/Overlay'
 import Modal from '@/components/app/Modal/Modal'
 import Field from '@/components/app/Modal/Field'
-import Checkbox from '@/components/app/Modal/Checkbox'
+import Checkbox from '@/components/app/Checkbox'
 import Button from '@/components/app/Button'
 
 export default {
@@ -98,12 +98,6 @@ export default {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  &__title {
-    font-size: 30px;
-    line-height: 42px;
-    padding-top: 40px;
-  }
 
   .container {
     max-width: 970px;

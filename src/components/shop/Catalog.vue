@@ -1,6 +1,6 @@
 <template>
   <div class="catalog">
-    <div class="catalog__items">
+    <div class="items">
       <Card
         v-for="(item, index) in list"
         :key="index"
@@ -26,3 +26,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.catalog {
+  width: 100%;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+  padding-bottom: 50px;
+}
+</style>

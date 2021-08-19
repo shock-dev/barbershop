@@ -1,6 +1,6 @@
 <template>
   <section class="main-section">
-    <h3 class="main-section__title">Новости</h3>
+    <Title :type="3" class="title">Новости</Title>
     <NewsItem
       v-for="(item, index) in list"
       :key="index"
@@ -17,10 +17,11 @@
 // Components
 import Button from '@/components/app/Button'
 import NewsItem from '@/components/home/NewsItem'
+import Title from '@/components/app/Title'
 
 export default {
   name: 'News',
-  components: { NewsItem, Button },
+  components: { Title, NewsItem, Button },
   props: {
     list: Array
   }

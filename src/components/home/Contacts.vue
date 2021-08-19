@@ -1,6 +1,6 @@
 <template>
   <section class="main-section">
-    <h3 class="main-section__title">Контактная информация</h3>
+    <Title :type="3" class="title">Контактная информация</Title>
     <ContactsItem
       v-for="(item, index) in list"
       :key="index"
@@ -24,10 +24,11 @@
 // Components
 import Button from '@/components/app/Button'
 import ContactsItem from '@/components/home/ContactsItem'
+import Title from '@/components/app/Title'
 
 export default {
   name: 'Contacts',
-  components: { ContactsItem, Button },
+  components: { Title, ContactsItem, Button },
   props: {
     list: Array
   }

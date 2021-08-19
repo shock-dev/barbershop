@@ -1,10 +1,9 @@
 <template>
   <div>
-    <h2 class="page__title">ПРАЙС-ЛИСТ</h2>
-
+    <Title style="margin-top: 40px">Прайс-лист</Title>
     <Breadcrumbs :list="breadcrumbsList" />
 
-    <h2 class="price-page__title">ИСТИННО МУЖСКАЯ КЛАССИКА</h2>
+    <h2 class="price-page__title">Истинно мужская классика</h2>
 
     <div class="price-page__row">
       <div class="price-page__col">
@@ -59,11 +58,13 @@
 import Breadcrumbs from "@/components/app/Breadcrumbs";
 import { setMeta } from '@/settings/meta';
 import { products } from '@/resources/products';
+import Title from '@/components/app/Title';
 
 export default {
   name: "Price",
   metaInfo: setMeta('Прайс-лист'),
   components: {
+    Title,
     Breadcrumbs
   },
   data() {

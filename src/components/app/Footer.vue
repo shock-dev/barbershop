@@ -44,3 +44,81 @@ export default {
   name: "Footer"
 }
 </script>
+
+<style lang="scss" scoped>
+.footer {
+  margin-top: auto;
+  color: #fff;
+  background-image: url('~@/assets/img/footer-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 55px 0 45px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social {
+    text-align: center;
+
+    &-title {
+      margin-bottom: 20px;
+    }
+
+    &-list {
+      display: flex;
+    }
+
+    &-item {
+      width: 43px;
+      height: 43px;
+      background-color: #000;
+      transition: background-color .2s;
+
+      a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+
+        &:hover,
+        &:focus {
+          background-color: #fff;
+
+          svg {
+            fill: #000;
+          }
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      svg {
+        fill: #fff;
+        transition: fill .2s;
+      }
+
+      .vk {
+        width: 28px;
+        height: 16px;
+      }
+
+      .facebook {
+        width: 11px;
+        height: 23px;
+      }
+
+      .instagram {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+</style>
