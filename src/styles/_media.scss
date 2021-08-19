@@ -14,11 +14,6 @@
   .price-page__title:after, .price-page__title:before {
     width: 110px;
   }
-
-  .catalog__item {
-    width: calc(100% / 12 * 6 - 20px);
-    margin: 10px;
-  }
 }
 
 @media (max-width: 930px) {
@@ -257,11 +252,6 @@
       margin-right: 0;
       margin-bottom: 10px;
     }
-  }
-
-  .catalog__item {
-    width: calc(100% - 20px);
-    margin: 10px;
   }
 
   .modal {
