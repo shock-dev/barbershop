@@ -45,12 +45,6 @@ img {
   max-width: 100%;
 }
 
-.app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 .container {
   max-width: 970px;
   padding: 0 15px;
@@ -64,45 +58,4 @@ button {
   font-family: inherit;
   color: inherit;
   text-transform: inherit;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba($black-color, .6);
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .3s;
-
-  &.active {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
-.lock {
-  overflow: hidden;
-}
-
-.map {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
-  left: 0;
-  z-index: 130;
-  width: 80%;
-  height: 80%;
-  margin: 0 auto;
-  visibility: hidden;
-  opacity: 0;
-
-  &.active {
-    visibility: visible;
-    opacity: 1;
-  }
 }
