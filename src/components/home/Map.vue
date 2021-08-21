@@ -38,4 +38,18 @@ export default {
     opacity: 1;
   }
 }
+
+@media (max-width: 600px) {
+  .map {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 380px) {
+  .map {
+    width: 80%;
+    height: 70%;
+  }
+}
 </style>

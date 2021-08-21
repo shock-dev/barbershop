@@ -5,20 +5,17 @@
     </router-link>
     <h3 class="title">{{ title }}</h3>
     <div class="footer">
-      <div class="price">{{ price }} ₽</div>
-      <Button class="btn">
-        Купить
-      </Button>
+      <PriceLabel :price="3000" />
     </div>
   </div>
 </template>
 
 <script>
-import Button from '@/components/app/Button'
+import PriceLabel from '@/components/app/PriceLabel'
 
 export default {
   name: 'Card',
-  components: { Button },
+  components: { PriceLabel },
   props: {
     title: String,
     price: Number,
@@ -51,18 +48,6 @@ export default {
   padding: 16px;
   display: flex;
   margin-top: auto;
-}
-
-.price {
-  flex-grow: 1;
-  background-color: #E4E4E4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn {
-  padding: 15px 20px;
 }
 
 @media (max-width: 950px) {
