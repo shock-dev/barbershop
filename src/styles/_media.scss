@@ -3,17 +3,6 @@
     width: 50%;
     padding: 25px 40px 50px 50px;
   }
-
-  .subscribe__field {
-    max-width: 180px;
-    width: 100%;
-  }
-}
-
-@media (max-width: 950px) {
-  .price-page__title:after, .price-page__title:before {
-    width: 110px;
-  }
 }
 
 @media (max-width: 930px) {
@@ -37,191 +26,15 @@
     justify-content: center;
   }
 
-  .gallery__box {
-    margin-top: 0;
-  }
-
   .news,
   .contact-info {
     padding-bottom: 20px;
-  }
-
-  .subscribe__label {
-    width: 48%;
-  }
-
-  .subscribe__name {
-    padding-left: 0;
-  }
-
-  .subscribe__field {
-    width: 100%;
-    max-width: none;
-  }
-
-  .product__images {
-    margin-right: 50px;
-  }
-}
-
-@media (max-width: 900px) {
-  .price-page__col-text {
-    padding-right: 30px;
-  }
-}
-
-@media (max-width: 840px) {
-  .product__images-min,
-  .product__images-big {
-    width: 90%;
-  }
-
-  .product__images {
-    margin-right: 0;
-  }
-
-  .product__images-min__item {
-    width: 30%;
-  }
-
-  .price-page__title:after, .price-page__title:before {
-    display: none;
-  }
-}
-
-@media (max-width: 750px) {
-  .product__images-min,
-  .product__images-big {
-    width: 80%;
-  }
-
-  .product__images {
-    min-width: auto;
-    max-width: 400px;
-    width: 100%;
-    margin-right: 30px;
-  }
-
-  .product__images-min,
-  .product__images-big {
-    width: 100%;
-  }
-
-  .sidebar {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    top: 0;
-    max-width: 300px;
-    width: 100%;
-    background-color: $white-color;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transform: translateX(-100%);
-    transition: transform .3s;
-    z-index: 200;
-
-    &.active {
-      transform: translateX(0);
-    }
-  }
-
-  .sidebar__group {
-    margin-bottom: 0;
-  }
-
-  .sidebar__group:not(:last-child) {
-    margin-bottom: 50px;
   }
 }
 
 @media (max-width: 700px) {
   .main-section-wrapper {
     width: 90%;
-  }
-
-  .product__wrapper {
-    flex-direction: column;
-  }
-
-  .product__images {
-    margin: 0 auto 0 auto;
-    max-width: 450px;
-  }
-
-  .product__images-min {
-    margin-bottom: 15px;
-  }
-
-  .product__info-buy {
-    margin-bottom: 35px;
-  }
-
-  .price-page__row.about {
-    flex-direction: column;
-    align-items: center;
-
-    .price-page__col {
-      width: 100%;
-    }
-
-    .price-page__col-text {
-      padding-right: 0;
-      max-width: none;
-    }
-  }
-
-  .price-page__col.without-title {
-    padding-top: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .modal__close {
-    top: 15px;
-    right: 15px;
-  }
-
-  .map {
-    width: 70%;
-    height: 70%;
-  }
-}
-
-@media (max-width: 580px) {
-  .price-page__row {
-    flex-direction: column;
-  }
-
-  .price-page__table {
-    margin-bottom: 35px;
-  }
-
-  .price-page__col {
-    width: 100%;
-  }
-
-  .price-page__col.table {
-    order: -1;
-  }
-
-  .price-page__title {
-    font-size: 38px;
-    margin-bottom: 35px;
-  }
-}
-
-@media (max-width: 540px) {
-  .footer__inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer__about {
-    margin-bottom: 30px;
   }
 }
 
@@ -235,10 +48,6 @@
     padding-right: 20px;
   }
 
-  .gallery__box {
-    margin-bottom: 25px;
-  }
-
   .contact-info__buttons {
     display: flex;
     flex-direction: column;
@@ -249,70 +58,4 @@
       margin-bottom: 10px;
     }
   }
-
-  .modal {
-    padding: 50px;
-  }
 }
-
-@media (max-width: 420px) {
-  .sidebar {
-    max-width: 100%;
-
-    &__cancel {
-      display: block;
-      position: absolute;
-      top: 25px;
-      right: 25px;
-      width: 40px;
-      height: 40px;
-
-      &:before,
-      &:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translate(-50%, -50%);
-        height: 3px;
-        width: 100%;
-        background-color: $black-color;
-      }
-
-      &:before {
-        transform: rotate(45deg);
-      }
-
-      &:after {
-        transform: rotate(-45deg);
-      }
-
-    }
-  }
-}
-
-@media (max-width: 380px) {
-  .subscribe__label {
-    width: 100%;
-  }
-
-  .subscribe__field {
-    width: 100%;
-    max-width: none;
-  }
-
-  .modal {
-    padding: 30px;
-    font-size: 13px;
-  }
-
-  .modal__checkbox-fake {
-    margin-right: 5px;
-  }
-
-  .map {
-    width: 80%;
-    height: 70%;
-  }
-}
-

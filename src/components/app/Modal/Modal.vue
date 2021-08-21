@@ -75,4 +75,17 @@ export default {
     right: 15px;
   }
 }
+
+@media (max-width: 500px) {
+  .modal {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 380px) {
+  .modal {
+    padding: 30px;
+    font-size: 13px;
+  }
+}
 </style>
